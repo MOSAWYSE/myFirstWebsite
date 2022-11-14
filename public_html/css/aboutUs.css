@@ -1,0 +1,316 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+body{
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        font-size: 20px;
+    }
+    nav{
+        background: #0082e6;
+        height: 80px;
+        width: 100%;
+        }
+
+ nav ul{
+        float: right;
+        margin-right: 20px;
+        }
+
+nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+        }
+        
+nav ul li a{
+            color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            }
+            
+    a.active,a:hover{
+        background: #1b9bff;
+        transition: .5s;
+    }
+    
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 50px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+    
+  }
+  
+  ul{
+    position: absolute;
+    width: 40%;
+    height: max-content;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    
+  }
+  
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  
+  nav ul li a{
+    font-size: 20px;
+  }
+  
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  
+  #check:checked ~ ul{
+    left: 0;
+    
+  }
+}
+ 
+
+h1{
+  text-align: center;
+}
+
+.expand >input[name="collapse"]{
+    display: none;
+    
+}
+
+.expand2 >input[name="collapse"]{
+    display: none;
+}
+
+.expand3 >input[name="collapse"]{
+    display: none;
+}
+
+
+.expand .content{
+    background-position: center;
+    justify-content: center;
+    background:#fff;
+    overflow:hidden;
+    height: 0;
+    box-shadow: 2px 4pxrgba(0, 0, 0,0.4);
+    transition: 0.5s;
+}
+
+.expand2 .content2{
+    background:#fff;
+    background-position: center;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow:hidden;
+    height: 0;
+    box-shadow: 2px 4pxrgba(0, 0, 0,0.4);
+    transition: 0.5s;
+}
+
+.expand3 .content3{
+    
+    background-position: center;
+    justify-content: center;
+    background:#fff;
+    overflow-y: scroll;
+    overflow:hidden;
+    height: 0;
+    box-shadow: 2px 4pxrgba(0, 0, 0,0.4);
+    transition: 0.5s;
+}
+
+.expand label{
+    
+    color:#fff;
+    cursor: pointer;
+    font-weight: normal;
+    background:#008080;
+}
+
+.expand2 label{
+   
+    color:#fff;
+    cursor: pointer;
+    font-weight: normal;
+    background:#008080;
+}
+
+.expand3 label{
+  
+    color:#fff;
+    cursor: pointer;
+    font-weight: normal;
+    background:#008080;
+}
+
+.expand label:hover, .expand label:focus{
+    color: #111111; 
+    width: max-content;
+    border-radius: 10px;
+}
+
+.expand2 label:hover, .expand label:focus{
+    color: #111111;
+    width: max-content;
+    border-radius: 10px;
+}
+
+.expand3 label:hover, .expand label:focus{
+    color: #111111; 
+    width: max-content;
+    border-radius: 10px;
+}
+
+.expand .handle handle1:before{
+    font-family: sans-serif;
+    content: "\f106";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1em;
+    line-height: normal;
+    vertical-align: middle;
+    transition: 0.4s;
+
+}
+
+.expand2 .handle handle2:before{
+    font-family: sans-serif;
+    content: "\f106";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1em;
+    line-height: normal;
+    vertical-align: middle;
+    transition: 0.4s;
+
+}
+
+.expand3 .handle handle3:before{
+    font-family: sans-serif;
+    content: "\f106";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1em;
+    line-height: normal;
+    vertical-align: middle;
+    transition: 0.4s;
+
+}
+
+.expand >input[name="collapse"]:checked ~ .handle handle1:before{
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: 0.4s;
+    
+}
+
+.expand2 >input[name="collapse"]:checked ~ .handle handle2:before{
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: 0.4s;
+    
+}
+
+.expand2 >input[name="collapse"]:checked ~ .handle handle3:before{
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: 0.4s;
+    
+}
+
+.expand > input[name="collapse"]:checked ~ .content{
+    height: max-content;
+    background-color: lightblue;
+    transition: height 0.5s;
+}
+
+.expand2 > input[name="collapse"]:checked ~ .content2{
+    height: max-content;
+    background-color: lightblue;
+    transition: height 0.5s;
+}
+
+.expand3 > input[name="collapse"]:checked ~ .content3{
+    height: max-content;
+    background-color: lightblue;
+    transition: height 0.5s;
+}
+
+p{
+    font-family: montserrat, Arial;
+   justify-content: normal;
+}
+h6{
+    text-align: center;
+}
+
+
+.vision{
+    position: fixed;
+    background-position: center;
+    
+}
+
+body{
+    background-image: url("../images/ourVision2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+footer{
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 73px;
+    font-size: 21px;
+    background: #6262ff;
+}
+
+.nav{
+    justify-content:center;
+}
